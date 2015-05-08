@@ -1,0 +1,329 @@
+/******************************************************全局参数*************************************************************/
+*{
+	margin:0;
+	padding:0;
+	font-family: "微软雅黑";
+	font-size:14px;
+	text-decoration:none;
+	list-style-type:none;
+}
+html,body {
+	width:100%;
+	min-width:1070px;
+	background:url(../images/background/1.jpg);
+	background-attachment:fixed;
+	}
+
+/*链接
+a:link {
+ 	color: #000000;
+}/*
+a:visited {
+	color: #666666;
+}
+a:hover {
+	color: #0000FF;
+}
+a:active {
+	color: #FFFFFF;
+}*/
+
+
+/*顶栏*/
+header{
+	height:130px;
+}
+#top_menu{
+	height:90px;
+	width:1070px;
+	margin:0 auto;
+	}
+/*LOGO*/
+#logo{
+	float:left;
+	width:320px;
+	height:90px;
+}
+/******************************************************右侧菜单*************************************************************/
+/*右侧悬浮菜单*/
+
+.right_menu1 li a:hover,.right_menu2 li a:hover,.right_menu3 li a:hover{
+	background:#00F;
+}
+
+.right_menu3 li a{
+	bottom: 353px;
+	right: 70px;
+	position:fixed;
+	float:right;
+	background: #000;
+	color: #FFF;
+	font-size: 12px;
+	padding:5px;
+	text-align:center;
+	width:30px;
+	height:30px;
+	text-decoration: none;
+	opacity: 0.5;
+	-webkit-transition: background 200ms linear;
+	-moz-transition: background 200ms linear;
+	transition: background 200ms linear;
+	}
+.right_menu2 li a {
+	bottom: 312px;
+	right: 70px;
+	position:fixed;
+	float:right;
+	background: #000;
+	color: #FFF;
+	font-size: 12px;
+	padding:5px;
+	text-align:center;
+	width:30px;
+	height:30px;
+	text-decoration: none;
+	opacity: 0.5;
+	-webkit-transition: background 200ms linear;
+	-moz-transition: background 200ms linear;
+	transition: background 200ms linear;
+}
+.right_menu1 li a{
+	bottom: 271px;
+	right: 70px;
+	position:fixed;
+	float:right;
+	background: #000;
+	color: #FFF;
+	font-size: 12px;
+	padding:5px;
+	text-align:center;
+	width:30px;
+	height:30px;
+	text-decoration: none;
+	opacity: 0.5;
+	-webkit-transition: background 200ms linear;
+	-moz-transition: background 200ms linear;
+	transition: background 200ms linear;
+	}
+.scrollUp {
+	bottom: 230px;
+	right: 70px;
+	background: #000;
+	color: #FFF;
+	font-size: 12px;
+	padding:5px;
+	text-align:center;
+	width:30px;
+	height:30px;
+	opacity: 0.5;
+	-webkit-transition: background 200ms linear;
+	-moz-transition: background 200ms linear;
+	transition: background 200ms linear;
+}
+.scrollUp:hover {
+	background:#00F;
+	}
+
+/*******************************************************主导航栏*************************************************************/
+/****顶部菜单****/
+
+nav{
+	height:35px;
+	overflow:hidden;
+}
+.floating{	
+	width:100%;
+	height:35px;
+	background:url(../images/background/1.jpg);
+	-webkit-box-shadow: 0 5px 5px 0 #000;  
+    -moz-box-shadow: 0 5px 5px 0 #000;  
+    box-shadow: 0px 3px 3px #000;
+	}
+
+.menu{	
+    width:1070px;
+	height:35px;
+	margin:0 auto;
+}
+/* 菜单子元素的内容超出不可见 */
+.menu ul li {
+	float: left;   
+	overflow: hidden; 
+	position: relative; 
+	text-align: center; 
+	line-height: 35px; 	
+
+}
+/* 必须是相对定位  */ 
+.menu ul li a { 
+	position: relative;
+	display: block; 
+	width: 90px;
+	height: 35px; 
+	font-family: Arial;
+	font-weight: bold; 
+	letter-spacing: 0px; 
+	text-transform: uppercase; 
+	text-decoration: none; 
+	cursor: pointer;
+	color:#000;
+	}
+ /* 所有层将使用绝对定位 */
+.menu ul li a span { 
+	position: absolute; 
+	left: 0; 
+	width: 90px;
+	}
+.menu ul li a span.over,  
+.menu ul li a span.bg { 
+	top: -35px; 
+			}
+/*字体活动颜色*/
+.menu ul li a span.over { 
+	color: #FFF; 
+}
+/*框活动位置*/
+.menu ul li span.bg {
+	height: 35px; 
+	background:#00F;
+ }
+/**********搜索框************/
+.search{
+	float:right;
+	padding-right:50px;
+	margin-top:2px;
+}
+.cf:before, .cf:after{
+	content:"";
+	display:table;
+    }
+.cf:after{
+    clear:both;
+    }
+/*搜索外框*/
+.form-wrapper {
+    width: 150px;
+    padding: 3px;
+	height: 25px;
+	background: rgba(0,0,0,.2);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+    }
+    
+.form-wrapper input {
+    width: 100px;
+    height: 15px;
+    padding: 5px 5px;
+    float: left;    
+    font: bold 13px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    border: 0;
+    background: #eee;
+    -moz-border-radius: 5px 0 0 3px;
+    -webkit-border-radius: 5px 0 0 3px;
+    border-radius: 5px 0 0 3px;      
+    }
+    
+.form-wrapper input:focus {
+    outline: 0;
+    background: #fff;
+    -moz-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+    -webkit-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+    }    
+/*搜索按钮框*/
+.form-wrapper button {
+	overflow: visible;
+    position: relative;
+    float: left;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 25px;
+    width: 40px;
+    font: bold 13px/20px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    color: #fff;
+    text-transform: uppercase;
+    background: #0066ff;
+    -moz-border-radius: 0 3px 3px 0;
+    -webkit-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;      
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+    }   
+      
+.form-wrapper button:hover{		
+    background: #0000ff;
+    }	
+      
+.form-wrapper button:hover:before{
+    border-right-color: #0000ff;
+    }
+.form-wrapper button:active,
+.form-wrapper button:focus{
+	background: #CCCCCC;
+    }
+.form-wrapper button:focus:before{
+    border-right-color: #CCCCCC;
+    } 
+/*箭头*/
+.form-wrapper button:before {
+    content: '';
+    position: absolute;
+    border-width: 5px 8px 5px 0;
+    border-style: solid solid solid none;
+    border-color: transparent #0066ff transparent;
+    top: 9px;
+    left: -6px;
+    }
+/*用户栏*/
+.menu_right{
+	float:right;
+	padding:8px;
+
+}
+article{
+	width:1070px;
+	margin:0 auto;
+	padding:10px 0 0 0;
+		}
+/******************************************************************页底*******************************************************/
+footer{
+	background:#252525;
+	margin-top:20px;
+	float:left;
+	width:100%;
+	}
+footer li{
+	font-size:14px;
+	color:#FFF;
+	}
+footer li a{
+	color:#666;
+	cursor:pointer;
+	}
+footer li a:hover{
+	color:#FFF;
+	}
+.footer_main{
+	width:1070px;
+	margin:0 auto;
+	padding:20px 30px 10px 30px;
+	}
+.footer_block{
+	padding:10px 120px 10px 0px;
+	float:left;
+	line-height:25px;
+	}
+.footer_block h1{
+	font-size:18px;
+	color:#CCC;
+	margin-bottom:5px;
+	}
+address{
+	text-align:center;
+	width:100%;
+	padding:10px 0 20px 0;
+	}

@@ -1,0 +1,160 @@
+/******************************************************全局参数*************************************************************/
+*{
+	margin:0;
+	padding:0;
+	font-family: "微软雅黑";
+	font-size:14px;
+	text-decoration:none;
+	list-style-type:none;
+	/*border:1px solid #000;*/
+}
+html,body {
+	width:100%;
+	min-width:1000px;
+	}
+/*****************************************顶栏************************************************/
+header{
+	height:90px;
+	width:1000px;
+	margin:10px auto;
+}
+/*LOGO*/
+#logo{
+	float:left;
+	width:280px;
+	height:90px;
+} 
+/*******************************主内容*********************************************/
+article{
+	width:1000px;
+	height:440px;
+	margin:0 auto;
+	} 
+#article_left{
+	float:left;
+	width:645px;
+	height:440px;
+	background:#FFF;
+	-webkit-box-shadow: 0px 0px 10px #666;
+	-moz-box-shadow: 0px 0px 10px #666;
+	box-shadow: 0px 0px 10px #666;
+	}
+#article_left2{
+	float:left;
+	width:645px;
+	height:410px;
+	background:#FFF;
+	-webkit-box-shadow: 0px 0px 10px #666;
+	-moz-box-shadow: 0px 0px 10px #666;
+	box-shadow: 0px 0px 10px #666;
+	}
+#article_left_title{
+	margin-top:20px;
+	text-align:center;
+	font-size:24px;
+	color:#0F0;
+	}
+#article_main{
+	padding:20px 0 0 40px;
+	}
+#article_user{
+	overflow:auto;
+	padding-right:40px;
+	height:340px;
+	}
+#article_user2{
+	overflow:auto;
+	padding-right:40px;
+	height:310px;
+	}
+#article_right{
+	float:right;
+	width:260px;
+	background:#FFF;
+	-webkit-box-shadow: 0px 0px 10px #666;
+	-moz-box-shadow: 0px 0px 10px #666;
+	box-shadow: 0px 0px 10px #666;
+	padding:20px 30px;
+	}
+#article_right_title{
+	color: #666;
+	font-size:20px;
+	padding-bottom:20px;
+	}
+.label{
+	margin-bottom:18px;
+	color: #666;
+	float:right;
+	}
+.input{
+	height:25px;
+	width:160px;
+	padding:0 10px;
+	}
+#code{
+	padding:0 10px;
+	height:25px;
+	width:80px;
+	}
+#getcode{
+	height:30px;
+	}
+#read{
+	float:left;
+	padding-left:30px;
+	color:#666;
+	}
+#read h1{
+	color:#F00;
+	float:right;
+	margin-bottom:10px;}
+#login{
+	float:right;
+	}
+#login a{
+	font-size:12px;
+	color: #666;
+	}
+#login a:hover{
+	font-size:12px;
+	color: #000;
+	}
+#register{
+	margin-top:10px;
+	width:100%;
+	height:40px;
+	font-size:16px;
+	background:#00A7DE;
+	color:#FFF;
+	border:1px solid #0381AA;
+	border-radius:5px;
+	cursor:pointer;
+	}
+#forget{
+	margin-top:10px;
+	width:100%;
+	height:40px;
+	font-size:16px;
+	background:#00A7DE;
+	color:#FFF;
+	border:1px solid #0381AA;
+	border-radius:5px;
+	cursor:pointer;
+	}
+/*密码强度*/
+.is0{
+	background: url(../images/passStronger.png) no-repeat 0 0;
+	margin-top:15px;
+	margin-left:60px;
+	height:7px;
+}
+.is10{background-position:0 -7px;}
+.is20{background-position:0 -14px;}
+.is30{background-position:0 -21px;}
+.is40{background-position:0 -28px;}
+.is50{background-position:0 -35px;}
+.is60{background-position:0 -42px;}
+.is70{background-position:0 -49px;}
+.is80{background-position:0 -56px;}
+.is90{background-position:0 -63px;}
+.is100{background-position:0 -70px;}

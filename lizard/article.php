@@ -1,0 +1,180 @@
+<?php
+session_start();
+include 'templates/class/global.class.php';
+$g->auth();
+$g->setSql("select * from l_system");
+$ss = NULL;
+$g->loadObject($ss);
+$id=$_GET['id'];
+$g->setSql("delete from l_articles where id='".$id."'");
+$g->query();
+if($id)
+ { 
+echo "<script>location.href='article.php';</script>"; 
+}
+$num_query=mysql_query("select count(id) from l_articles ");//查询数据库总条数
+$pagesize=10;//定义每个页面显示的条数
+$article=mysql_fetch_array($num_query);
+$count=$article[0];//总条数
+$page=empty($_GET['page'])?1:$_GET["page"];//显示当前页
+//显示当页面信息页面
+$sql="select * from l_articles limit ".($page-1)*$pagesize.",".$pagesize;
+$query=mysql_query($sql);
+?>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title><?php echo $ss->title2;?></title>
+<link rel="stylesheet" type="text/css" href="templates/css/table.css">
+<link rel="stylesheet" type="text/css" href="templates/css/main.css">
+<link rel="stylesheet" type="text/css" href="templates/css/font-awesome-4.3.0/css/font-awesome.min.css">
+<script type="text/javascript" src="templates/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="templates/js/top_menu.js"></script>
+<script type="text/javascript" src="templates/js/left_menu.js"></script>
+<script type="text/javascript" src="templates/js/table.js"></script>
+
+
+</head>
+
+<body>
+<header>
+<span id="logo">
+<img src="templates/images/logo/logo.png" width="130" height="30" /></div>
+</span>
+	<nav>
+      <li><a href="admin.php"><i class="fa fa-home fa-fw"></i> 首页</a></li>
+      <li class="color"><a href="article.php"><i class="fa fa-file-text-o fa-fw "></i> 内容</a></li>
+       <li><a href="user.php"><i class="fa fa-user fa-fw"></i> 用户</a></li>
+      <li><a href="system.php?id=1"><i class="fa fa-cog fa-fw"></i> 系统</a></li>
+	</nav>
+	<ul class="user">
+		<li>
+			<div class="link">你好，<?php $g->menu();?><i class="fa fa-chevron-down fa-fw"></i></div>
+			<ul class="user_menu">
+				<li><a href="logout.php">退出</a></li>
+			</ul>
+		</li>
+	</ul>
+	<!--<div class="search">
+		<form class="form-wrapper cf">
+			<input type="text" placeholder="请输入关键词..." required>
+			<button type="submit"><i class="fa fa-search fa-fw"></i> 搜索</button>
+		</form> 
+	</div>-->
+</header> 
+<div class="left_menu">
+<ul class="left_menu_a">
+	<ul>
+		<li>
+			<div class="left_menu_title1">
+            <i class="fa fa-files-o fa-fw"></i> 博文管理<i class="fa fa-chevron-up fa-fw"></i></div>
+			<ul class="left_menu_sub1">
+				<li class="sub1_color"><a href="article.php">所有博文</a></li>
+				<li><a href="newarticle.php">编辑博文</a></li>
+			</ul>
+		</li>
+	</ul>
+    <ul>
+		<li>
+			<div class="left_menu_title">
+            <i class="fa fa-comments-o fa-fw"></i> 微博管理<i class="fa fa-chevron-down fa-fw"></i></div>
+			<ul class="left_menu_sub">
+				<li><a href="talk.php">所有微博</a></li>
+                <li><a href="newtalk.php">编辑微博</a></li>
+			</ul>
+		</li>
+	</ul>
+    <ul>
+		<li>
+			<div class="left_menu_title">
+            <i class="fa fa-comment fa-fw"></i> 留言管理<i class="fa fa-chevron-down fa-fw"></i></div>
+			<ul class="left_menu_sub">
+				<li><a href="content.php">所有留言</a></li>
+				<li><a href="newguest.php">作者寄语</a></li>
+			</ul>
+		</li>
+	</ul>
+    
+    <ul>
+		<li>
+			<div class="left_menu_title">
+            <i class="fa fa-list-ul fa-fw"></i> 分类管理<i class="fa fa-chevron-down fa-fw"></i></div>
+			<ul class="left_menu_sub">
+				<li><a href="category.php">所有分类</a></li>
+			</ul>
+		</li>
+	</ul>
+
+</div>
+<article>
+	<div class="article_title">
+    所有博文
+	</div>
+   <!-- <div class="article_function">
+    <button class="article_button" >发 布</button>
+    <button class="article_button" >禁 用</button>
+    <button class="article_button">删 除</button>
+    </div>-->
+	<table id="article_table" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<th><input type="checkbox" id="all"> </th>
+    		<th>编码</th>
+    		<th>标题</th>
+            <th>分类</th>
+    		<th>作者</th>
+            <th>创建时间</th>
+            <th>修改时间</th>
+    		<th>状态</th>
+            <th>操作</th>
+		</tr>
+        <?php
+		//分页模块
+		
+
+		if($article[0]){
+		while($article=mysql_fetch_array($query)){
+		echo "<tr>";
+			echo '<td>
+			<input type="checkbox" name="items">
+			</td>';
+			echo '<td>'.$article[0].'</td>';
+			echo '<td>'.$article[1].'</td>';
+			echo '<td>'.$article[2].'</td>';
+			echo '<td>'.$article[3].'</td>';
+			echo '<td>'.$article[5].'</td>';
+			echo '<td>'.$article[6].'</td>';
+			if($article[8]==1){
+				echo "<td>正常</td>";
+			}else{
+				echo "<td>关闭</td>";
+			}
+			echo '<td>
+					<a href="editarticle.php?id='.$article[0].'">编辑</a>/
+					<a href="article.php?id='.$article[0].'">删除</a>
+				 </td>';
+			echo "</tr>";
+		}	
+			}else{
+	echo "<td>暂时没有内容</td>";
+	}
+		?>
+	</table>
+<?php 
+
+if($count>10){
+$page = new PageClass($count,$pagesize,$page,'?page={page}');//用于动态
+echo "".$page -> myde_write()."";
+}//显示
+?>
+
+</article>
+
+<footer> 
+    <address>
+<li><?php echo $ss->copyright;?></li>
+<li><a href="http://www.miibeian.gov.cn" target="_blank"><?php echo $ss->address;?></a></li>
+    </address>
+</footer> 
+</body>
+</html>

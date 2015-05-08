@@ -1,0 +1,62 @@
+/**************************分类表格*********************************************/
+.article_button {
+	width:80px;
+	height: 40px;
+	font-weight: bold;
+	color: #FFF;
+	margin-top:100px;
+	text-align: center;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.3);
+	background: #adcbfa;
+	background-clip: padding-box;
+	border: 1px solid #284473;
+	border-bottom-color: #223b66;
+	border-radius: 4px;
+	cursor: pointer;
+	-webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 0 7px rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 0 7px rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.15);
+
+}
+.article_button:active {
+	-webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.4), 0 1px rgba(255, 255, 255, 0.1);
+	box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.4), 0 1px rgba(255, 255, 255, 0.1);
+}
+.article_button:hover {
+	background: #06F;
+}
+.select_img{
+	padding:120px 0 0 0;
+	float:left;
+	text-align:center;
+	}
+.select_img2{
+	padding:120px 50px 0 50px;
+	float:left;
+	}
+#select1,#select2,#select3,#select4{
+	width:200px;
+	float:left;
+	}
+#select_title1,#select_title2,#select_title3,#select_title4{
+	text-align:center;
+}
+#select_main1,#select_main2,#select_main3,#select_main4{
+	cursor: pointer;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  position: relative;
+  height: 200px;
+  width:200px;
+  padding: 0;
+  overflow-y: auto;
+}

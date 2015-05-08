@@ -1,0 +1,64 @@
+
+/***********主内容区***************************/
+
+.article_function{
+	margin-bottom:10px;
+	float:left;
+	width:100%;
+	}
+.article_button {
+	border: 0px none;
+	margin-right: 5px;
+	padding: 6px 16px;
+	font-size: 14px;
+	line-height: 18px;
+	color: #FFF;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: #00F;
+	margin-right:10px;
+}
+.article_button:active {
+	-webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.4), 0 1px rgba(255, 255, 255, 0.1);
+	box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.4), 0 1px rgba(255, 255, 255, 0.1);
+}
+.article_button:hover {
+	background: #06F;
+}
+/********************表单***********************************************/
+#article_table {
+	width:100%;
+}
+#article_table tr th {
+	background-color:#353535;
+	padding:5px 10px;
+	text-align:left;
+	color:#FFF;
+}
+#article_table tr td{
+	padding:5px 10px;
+	text-align:left;
+	color:#686868;
+	} 
+.one{
+	background-color:#F4F4F4;
+	
+}
+.two{
+	background-color:#c3dde0;
+}
+/*************************分页*************************************/
+.article_page{
+	margin-top:10px;
+	}
+.article_input {
+	height: 30px;
+	padding:0 10px;
+	color:#000;
+}
+.article_input:focus {
+	outline: 0px none;
+	border-color:#000;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) inset, 0px 0px 8px rgba(82, 168, 236, 0.6);
+}

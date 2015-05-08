@@ -1,0 +1,34 @@
+footer{
+	clear:both;
+	margin-top:20px;
+	}
+#footer_main{
+	width:500px;
+	margin:0 auto;
+	height:20px;
+	}
+.footer_box{
+	float:left;
+	margin:0 10px 0 50px;
+	}
+
+.footer_box a{
+	font-size:14px;
+	color: #666;
+	cursor:pointer;
+	}
+.footer_box a:hover{
+	font-size:14px;
+	color: #000;
+	}
+address{
+	margin-top:20px;
+	text-align:center;
+	color:#666;
+	}
+address a{
+	color: #666;
+	}
+address a:hover{
+	color: #000;
+	}
