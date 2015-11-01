@@ -12,7 +12,7 @@ class mysql{
 	* 参数包括数据库服务器的地址、用户名、密码、使用的字符集、要操作的数据库名称、表名称前缀。
 	* 参数默认值为空
 	*/
-	function mysql($host,$user,$pass,$db,$setchar,$prefix){
+	function __construct($host,$user,$pass,$db,$setchar,$prefix){
 		//检查当前系统是否开启mysql运行，如果没有开启mysql运行，结束脚本运行，并显示提示信息
 		if(!function_exists('mysql_connect')){
 			echo "当前系统没有开启MYSQL运行，请检查相关设置!";
