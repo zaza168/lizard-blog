@@ -1,12 +1,12 @@
 <?php
 header("Content-Type: text/html;charset=utf-8"); 
 class mysql{
-	var $_sql='';//定义一个用于存储SQL语句的变量
-	var $_prefix='';//定义一个用于存储表名称前缀的变量
-	var $_errno=0;//定义存储错误代码的变量
-	var $_error='';//定义存储错误信息的变量
-	var $_conn = '';//定义用于存储链接的变量
-	var $_result='';//定义用于存储结果集的变量
+	public $_sql='';//定义一个用于存储SQL语句的变量
+	public $_prefix='';//定义一个用于存储表名称前缀的变量
+	public $_errno=0;//定义存储错误代码的变量
+	public $_error='';//定义存储错误信息的变量
+	public $_conn = '';//定义用于存储链接的变量
+	public $_result='';//定义用于存储结果集的变量
 	/**
 	* 实现数据链接的方法.
 	* 参数包括数据库服务器的地址、用户名、密码、使用的字符集、要操作的数据库名称、表名称前缀。
