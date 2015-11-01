@@ -5,13 +5,13 @@
 class PageClass
 {
 	private $myde_count;       //总记录数
-	var $myde_size;    //每页记录数
+	public $myde_size;    //每页记录数
 	private $myde_page;    //当前页
 	private $myde_page_count;  //总页数
 	private $page_url;     //页面url
 	private $page_i;       //起始页
 	private $page_ub;      //结束页
-	var $page_limit;
+	public $page_limit;
 	function __construct($myde_count=0, $myde_size=1, $myde_page=1,$page_url)//构造函数
 	{
 		$this -> myde_count = $this -> numeric($myde_count);
