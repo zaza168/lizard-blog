@@ -27,7 +27,7 @@ class globalClass extends mysql{
 		exit();
 	}
 	//信息提示窗口4
-		function alert4($info,$url,$time=0){
+	function alert4($info,$url,$time=0){
 		echo '<script language="javascript">alert("'.$info.'");</script>'; 
 		echo '<meta http-equiv="Refresh" content="'.$time.';url='.$url.'"/>';
 		exit();
